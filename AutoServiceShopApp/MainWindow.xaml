@@ -1,0 +1,34 @@
+﻿<Window x:Class="AutoServiceShopApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoServiceShopApp"
+        mc:Ignorable="d"
+        Title="Админ панель Магазин Автосервиса" Height="700" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="#FFE1E4FF" Orientation="Horizontal">
+            <Image Source=".//Resources/beauty_logo.png"
+                   HorizontalAlignment="Left"
+                   Width="55" Margin="10 0 0 0"/>
+            <Button x:Name="btnBack"
+                    Width="150" Height="30" FontSize="17"
+                    Foreground="White" Background="#8a7f8e"
+                    Margin="500 0 0 0" FontFamily="Tahoma">Назад</Button>
+            <Button x:Name="btnFAQ"
+                    Width="150" Height="30" FontSize="17"
+                    Foreground="White" Background="#8a7f8e"
+                    Margin="5 0 0 0" FontFamily="Tahoma">FAQ</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <Image Source=".//Resources/beauty_logo.png"
+                   Opacity=".1"
+                   Width="490"/>
+        </StackPanel>
+        <Frame x:Name="FrmMain" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C44B63F-ECD0-40CC-88DE-251AB7913F37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AutoServiceShopApp</RootNamespace>
+    <AssemblyName>AutoServiceShopApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppDataFile\Client.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\ClientService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\ConnectOdb.cs" />
+    <Compile Include="AppDataFile\DocumentByService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\FrameObj.cs" />
+    <Compile Include="AppDataFile\Gender.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\Manufacturer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\manufacturer_a_import.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\ProductPhoto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\ProductSale.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\productsale_a_import12.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\product_a_import21.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\Service.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\ServicePhoto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataFile\Tag.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\PageAddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageEditNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\PageAddProduct.xaml.cs">
+      <DependentUpon>PageAddProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageEditNew.xaml.cs">
+      <DependentUpon>PageEditNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageMain.xaml.cs">
+      <DependentUpon>PageMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageProduct.xaml.cs">
+      <DependentUpon>PageProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="AppDataFile\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AppDataFile\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\beauty_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppDataFile\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="AppDataFile\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Товары автосервиса\0070C563.jpg" />
+    <Resource Include="Товары автосервиса\022096CB.jpg" />
+    <Resource Include="Товары автосервиса\03D096CB.jpg" />
+    <Resource Include="Товары автосервиса\0D30C4EE.jpg" />
+    <Resource Include="Товары автосервиса\0D60A8A4.jpg" />
+    <Resource Include="Товары автосервиса\0DF0A8A4.jpg" />
+    <Resource Include="Товары автосервиса\21B0E533.jpg" />
+    <Resource Include="Товары автосервиса\23106A35.jpg" />
+    <Resource Include="Товары автосервиса\2390848B.jpg" />
+    <Resource Include="Товары автосервиса\23F0848B.jpg" />
+    <Resource Include="Товары автосервиса\27B0C883.jpg" />
+    <Resource Include="Товары автосервиса\2A109062.jpg" />
+    <Resource Include="Товары автосервиса\2B009062.jpg" />
+    <Resource Include="Товары автосервиса\2B609062.jpg" />
+    <Resource Include="Товары автосервиса\2D709062.jpg" />
+    <Resource Include="Товары автосервиса\2E00E06C.jpg" />
+    <Resource Include="Товары автосервиса\2E30E06C.jpg" />
+    <Resource Include="Товары автосервиса\2E60E06C.jpg" />
+    <Resource Include="Товары автосервиса\30E0C751.jpg" />
+    <Resource Include="Товары автосервиса\3760D73F.jpg" />
+    <Resource Include="Товары автосервиса\3970E753.jpg" />
+    <Resource Include="Товары автосервиса\39A0C188.jpg" />
+    <Resource Include="Товары автосервиса\39D0C188.jpg" />
+    <Resource Include="Товары автосервиса\3B70C57C.jpg" />
+    <Resource Include="Товары автосервиса\3DA0B713.jpg" />
+    <Resource Include="Товары автосервиса\3DF0E4BC.jpg" />
+    <Resource Include="Товары автосервиса\40409946.jpg" />
+    <Resource Include="Товары автосервиса\43909176.jpg" />
+    <Resource Include="Товары автосервиса\43C09176.jpg" />
+    <Resource Include="Товары автосервиса\43E08C52.jpg" />
+    <Resource Include="Товары автосервиса\45008C52.jpg" />
+    <Resource Include="Товары автосервиса\45908C52.jpg" />
+    <Resource Include="Товары автосервиса\47E07CB5.jpg" />
+    <Resource Include="Товары автосервиса\5180B90E.jpg" />
+    <Resource Include="Товары автосервиса\5250C855.jpg" />
+    <Resource Include="Товары автосервиса\54B0795D.jpg" />
+    <Resource Include="Товары автосервиса\59B0BE73.jpg" />
+    <Resource Include="Товары автосервиса\5A30A7EE.jpg" />
+    <Resource Include="Товары автосервиса\5BB0C351.jpg" />
+    <Resource Include="Товары автосервиса\5BE0C351.jpg" />
+    <Resource Include="Товары автосервиса\6080DCD5.jpg" />
+    <Resource Include="Товары автосервиса\63C09E91.jpg" />
+    <Resource Include="Товары автосервиса\6730A31C.jpg" />
+    <Resource Include="Товары автосервиса\6800BB8A.jpg" />
+    <Resource Include="Товары автосервиса\69C0CD62.jpg" />
+    <Resource Include="Товары автосервиса\6CA0BE73.jpg" />
+    <Resource Include="Товары автосервиса\6CE0A012.jpg" />
+    <Resource Include="Товары автосервиса\6DA0A012.jpg" />
+    <Resource Include="Товары автосервиса\6DD0A012.jpg" />
+    <Resource Include="Товары автосервиса\7B70B9C6.jpg" />
+    <Resource Include="Товары автосервиса\8430842A.jpg" />
+    <Resource Include="Товары автосервиса\85C04040.jpg" />
+    <Resource Include="Товары автосервиса\8BC0C1A9.jpg" />
+    <Resource Include="Товары автосервиса\8E20A863.jpg" />
+    <Resource Include="Товары автосервиса\8F609ED7.jpg" />
+    <Resource Include="Товары автосервиса\8F909ED7.jpg" />
+    <Resource Include="Товары автосервиса\8FE07916.jpg" />
+    <Resource Include="Товары автосервиса\90505D31.jpg" />
+    <Resource Include="Товары автосервиса\90A0B807.jpg" />
+    <Resource Include="Товары автосервиса\90D0B807.jpg" />
+    <Resource Include="Товары автосервиса\9290C1E7.jpg" />
+    <Resource Include="Товары автосервиса\92C0C1E7.jpg" />
+    <Resource Include="Товары автосервиса\9380C1E7.jpg" />
+    <Resource Include="Товары автосервиса\96E0C1E7.jpg" />
+    <Resource Include="Товары автосервиса\9750DA76.jpg" />
+    <Resource Include="Товары автосервиса\97809225.jpg" />
+    <Resource Include="Товары автосервиса\9B3075EB.jpg" />
+    <Resource Include="Товары автосервиса\AD00B713.jpg" />
+    <Resource Include="Товары автосервиса\B0A0C186.jpg" />
+    <Resource Include="Товары автосервиса\B0F0CB59.jpg" />
+    <Resource Include="Товары автосервиса\B590AA7B.jpg" />
+    <Resource Include="Товары автосервиса\B790A6AA.jpg" />
+    <Resource Include="Товары автосервиса\BA30C186.jpg" />
+    <Resource Include="Товары автосервиса\BD80E8D5.jpg" />
+    <Resource Include="Товары автосервиса\C310B9F3.jpg" />
+    <Resource Include="Товары автосервиса\C9C0F036.jpg" />
+    <Resource Include="Товары автосервиса\CC10C869.jpg" />
+    <Resource Include="Товары автосервиса\CC40C869.jpg" />
+    <Resource Include="Товары автосервиса\D0D08F32.jpg" />
+    <Resource Include="Товары автосервиса\D2508F32.jpg" />
+    <Resource Include="Товары автосервиса\D4D0CE67.jpg" />
+    <Resource Include="Товары автосервиса\D9605006.jpg" />
+    <Resource Include="Товары автосервиса\DC70BEC3.jpg" />
+    <Resource Include="Товары автосервиса\E0A0E079.jpg" />
+    <Resource Include="Товары автосервиса\E0D0E079.jpg" />
+    <Resource Include="Товары автосервиса\E320BB7C.jpg" />
+    <Resource Include="Товары автосервиса\E3A0B18A.jpg" />
+    <Resource Include="Товары автосервиса\E5507A37.jpg" />
+    <Resource Include="Товары автосервиса\E9308929.jpg" />
+    <Resource Include="Товары автосервиса\EF80D790.jpg" />
+    <Resource Include="Товары автосервиса\EFC05011.jpg" />
+    <Resource Include="Товары автосервиса\F160E078.jpg" />
+    <Resource Include="Товары автосервиса\F200BC2F.jpg" />
+    <Resource Include="Товары автосервиса\F2B0E078.jpg" />
+    <Resource Include="Товары автосервиса\F2E0E078.jpg" />
+    <Resource Include="Товары автосервиса\F310E078.jpg" />
+    <Resource Include="Товары автосервиса\F460E078.jpg" />
+    <Resource Include="Товары автосервиса\F490E078.jpg" />
+    <Resource Include="Товары автосервиса\F8E0B138.jpg" />
+    <Resource Include="Товары автосервиса\FA90B138.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
