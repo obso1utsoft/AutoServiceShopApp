@@ -36,7 +36,7 @@ namespace AutoServiceShopApp.Pages
         {
             var HistoryProduct = ConnectOdb.conObj.Product.ToList();
             ListProduct.ItemsSource = HistoryProduct;
-            ListProduct.ItemsSource = ConnectOdb.conObj.Product.Where(x => x.Title.StartsWith(TxtSearch.Text) | x.Description.StartsWith(TxtSearch.Text)).ToList();
+            ListProduct.ItemsSource = ConnectOdb.conObj.Product.Where(x => x.Title.ToLower().Contains(TxtSearch.Text) | x.Description.StartsWith(TxtSearch.Text)).ToList();
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
