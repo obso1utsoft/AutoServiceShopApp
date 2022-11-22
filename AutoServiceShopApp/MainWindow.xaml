@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoServiceShopApp"
         mc:Ignorable="d"
-        Title="Админ панель Магазин Автосервиса" Height="700" Width="900">
+        Title="Админ панель Магазин Автосервиса" MinHeight="500" MinWidth="900" Height="700" Width="900">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="23*"/>
@@ -16,6 +16,7 @@
                    HorizontalAlignment="Left"
                    Width="55" Margin="10 0 0 0"/>
             <Button x:Name="btnBack"
+                    Click="btnBack_Click"
                     Width="150" Height="30" FontSize="17"
                     Foreground="White" Background="#8a7f8e"
                     Margin="500 0 0 0" FontFamily="Tahoma">Назад</Button>

@@ -31,6 +31,7 @@
                 <Button 
                     Name="btnAddProduct"
                     Content="Добавить товар"
+                    Click="btnAddProduct_Click"
                     Style="{StaticResource mainBtn}"/>
                 <Button 
                     Name="btnStuff"

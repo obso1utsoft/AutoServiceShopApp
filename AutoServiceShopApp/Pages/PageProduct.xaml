@@ -9,16 +9,26 @@
       Title="PageProduct">
 
     <Grid>
-        <ScrollViewer>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top">
+            <TextBlock Text="Поиск:"
+                        Margin="5"
+                        FontSize="17"/>
+            <TextBox Name="TxtSearch"
+                     Width="700"
+                     FontSize="15"
+                     Height="25"
+                     Margin="5"/>
+        </StackPanel>
+        <ScrollViewer VerticalAlignment="Top"
+                      Margin="0 30 0 150">
             <StackPanel Orientation="Vertical">
-                <TextBox Name="TxtSearch"
-                         Width="700"
-                         Height="25"
-                         Margin="5"/>
+                
                 <ListBox Name="ListProduct"
-                         Background="Transparent"
-                         Width="650"
-                         BorderBrush="Transparent">
+                     Background="Transparent"
+                     Width="650"
+                     BorderBrush="Transparent"
+                     PreviewMouseWheel="ListBox_PreviewMouseWheel">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <ListBoxItem
@@ -26,11 +36,10 @@
                                 Background="White"
                                 Width="600">
                                 <ListBoxItem.Resources>
-                                    <Style TargetType="ListBoxItem"
-                                           x:Key="LblRed">
+                                    <Style TargetType="ListBoxItem">
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Product.IsActive}"
-                                                         Value="0">
+                                            <DataTrigger Binding="{Binding IsActive}"
+                                                         Value="False">
                                                 <Setter Property="Background" Value="Red"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -46,9 +55,18 @@
                                            Style="{StaticResource ImgSource}"
                                            />
                                     <TextBlock Text="{Binding Title}"
-                                               Name="TxtNamePProduct"
+                                               Name="TxtNameProduct"
                                                Style="{StaticResource prdctTxtb}"
                                                />
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Производитель: "
+                                                   Style="{StaticResource prdctTxtb}"
+                                                   />
+                                        <TextBlock Text="{Binding Manufacturer.Name}"
+                                               Name="TxtManufacturerPProduct"
+                                               Style="{StaticResource prdctTxtb}"
+                                               />
+                                    </StackPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="{Binding Cost}"
                                                    Style="{StaticResource prdctTxtb}"
@@ -71,7 +89,7 @@
                                                 Style="{StaticResource mainBtn}"
                                                 />
                                     </StackPanel>
-                                    
+
                                 </StackPanel>
                             </ListBoxItem>
                         </DataTemplate>
@@ -79,5 +97,32 @@
                 </ListBox>
             </StackPanel>
         </ScrollViewer>
+        
+        <StackPanel VerticalAlignment="Bottom">
+            <DataGrid Name="gridListProduct"
+                      Height="150"
+                      IsReadOnly="True"
+                      SelectionMode="Extended"
+                      SelectionUnit="Cell"
+                      AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Название продукта"
+                                        Binding="{Binding Title}"
+                                        Width="*"/>
+                    <DataGridTextColumn Header="Цена"
+                                        Binding="{Binding Cost}"
+                                        Width="*"/>
+                    <DataGridTextColumn Header="Описание"
+                                        Binding="{Binding Description}"
+                                        Width="*"/>
+                    <DataGridTextColumn Header="В наличии"
+                                        Binding="{Binding IsActive}"
+                                        Width="*"/>
+                    <DataGridTextColumn Header="Производитель"
+                                        Binding="{Binding ManufacturerID}"
+                                        Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Page>

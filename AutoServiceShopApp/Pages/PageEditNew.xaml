@@ -46,7 +46,7 @@
                 <RadioButton Name="RbActive"
                              Content="Доступен"
                            Style="{StaticResource dfltRb}"/>
-                <RadioButton Name="RbNotctive"
+                <RadioButton Name="RbNotActive"
                              Content="Не доступен"
                            Style="{StaticResource dfltRb}"/>
             </StackPanel>

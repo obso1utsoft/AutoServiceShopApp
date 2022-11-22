@@ -30,5 +30,10 @@ namespace AutoServiceShopApp
 
             FrmMain.Navigate(new PageMain());
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObj.frameMain.GoBack();
+        }
     }
 }

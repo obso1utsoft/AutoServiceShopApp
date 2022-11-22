@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoServiceShopApp.AppDataFile;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,10 +25,13 @@ namespace AutoServiceShopApp.Pages
         {
             InitializeComponent();
         }
-
         private void btnProduct_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new PageProduct());
+            FrameObj.frameMain.Navigate(new PageProduct());
+        }
+        private void btnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObj.frameMain.Navigate(new PageAddProduct());
         }
     }
 }
