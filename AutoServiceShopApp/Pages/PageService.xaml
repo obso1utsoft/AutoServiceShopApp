@@ -74,6 +74,23 @@
             </StackPanel>
         </ScrollViewer>
 
+        <StackPanel VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 17 150">
+            <Button Name="BtnAdd"
+                    Click="BtnAdd_Click"
+                    Content="Добавить сервис"
+                    Width="150"
+                    Style="{StaticResource mainBtn}"
+                />
+            <Button Name="BtnSaleHistory"
+                    Click="BtnSaleHistory_Click"
+                    Content="История продаж"
+                    Width="150"
+                    Style="{StaticResource mainBtn}"
+                />
+        </StackPanel>
+
         <StackPanel VerticalAlignment="Bottom">
             <DataGrid Name="gridListService"
                       Height="150"

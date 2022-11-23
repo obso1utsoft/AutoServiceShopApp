@@ -57,5 +57,15 @@ namespace AutoServiceShopApp.Pages
         {
             FrameObj.frameMain.Navigate(new PageEditService((sender as Button).DataContext as Service));
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObj.frameMain.Navigate(new PageAddService());
+        }
+
+        private void BtnSaleHistory_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

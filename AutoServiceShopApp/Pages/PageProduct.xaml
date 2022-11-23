@@ -97,6 +97,23 @@
                 </ListBox>
             </StackPanel>
         </ScrollViewer>
+
+        <StackPanel VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 17 150">
+            <Button Name="BtnAdd"
+                    Click="BtnAdd_Click"
+                    Content="Добавить товар"
+                    Width="150"
+                    Style="{StaticResource mainBtn}"
+                />
+            <Button Name="BtnSalehisory"
+                    Click="BtnSalehistory_Click"
+                    Content="История продаж"
+                    Width="150"
+                    Style="{StaticResource mainBtn}"
+                />
+        </StackPanel>
         
         <StackPanel VerticalAlignment="Bottom">
             <DataGrid Name="gridListProduct"

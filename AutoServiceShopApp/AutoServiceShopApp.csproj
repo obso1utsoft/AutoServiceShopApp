@@ -147,6 +147,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageAddService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageEditNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,6 +179,9 @@
   <ItemGroup>
     <Compile Include="Pages\PageAddProduct.xaml.cs">
       <DependentUpon>PageAddProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAddService.xaml.cs">
+      <DependentUpon>PageAddService.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageEditNew.xaml.cs">
       <DependentUpon>PageEditNew.xaml</DependentUpon>

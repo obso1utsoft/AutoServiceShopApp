@@ -63,5 +63,9 @@ namespace AutoServiceShopApp.Pages
         {
             FrameObj.frameMain.Navigate(new PageSaleHistory((sender as Button).DataContext as Product));
         }
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObj.frameMain.Navigate(new PageAddProduct());
+        }
     }
 }

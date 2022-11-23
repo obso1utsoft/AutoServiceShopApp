@@ -1,4 +1,4 @@
-﻿<Page x:Class="AutoServiceShopApp.Pages.PageAddProduct"
+﻿<Page x:Class="AutoServiceShopApp.Pages.PageAddService"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:AutoServiceShopApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageAddProduct">
+      Title="PageAddService">
 
     <Grid>
         <StackPanel HorizontalAlignment="Center"
@@ -25,30 +25,28 @@
                          Style="{StaticResource mainTxtb}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Длительность в секундах: "
+                           Style="{StaticResource mainTxt}"/>
+                <TextBox Name="TxtDuration"
+                         Style="{StaticResource mainTxtb}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Описание: "
                            Style="{StaticResource mainTxt}"/>
                 <TextBox Name="TxtDescription"
                          Style="{StaticResource mainTxtb}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Фотография товара: "
+                <TextBlock Text="Скидка: "
                            Style="{StaticResource mainTxt}"/>
-                <TextBox Name="TxtImage"
+                <TextBox Name="TxtDiscount"
                          Style="{StaticResource mainTxtb}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Выберите производителя: "
+                <TextBlock Text="Фотография сервиса: "
                            Style="{StaticResource mainTxt}"/>
-                <ComboBox Name="CmbxOwner"
-                         Style="{StaticResource mainCmbx}"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <RadioButton Name="RbActive"
-                             Content="Доступен"
-                           Style="{StaticResource dfltRb}"/>
-                <RadioButton Name="RbNotActive"
-                             Content="Не доступен"
-                           Style="{StaticResource dfltRb}"/>
+                <TextBox Name="TxtImage"
+                         Style="{StaticResource mainTxtb}"/>
             </StackPanel>
             <Button Content="Добавить"
                     Name="BtnSave"
