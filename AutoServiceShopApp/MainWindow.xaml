@@ -12,7 +12,7 @@
             <RowDefinition Height="200*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Background="#FFE1E4FF" Orientation="Horizontal">
-            <Image Source=".//Resources/beauty_logo.png"
+            <Image Source=".//Resources/service_logo.png"
                    HorizontalAlignment="Left"
                    Width="55" Margin="10 0 0 0"/>
             <Button x:Name="btnBack"
@@ -26,7 +26,7 @@
                     Margin="5 0 0 0" FontFamily="Tahoma">FAQ</Button>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
-            <Image Source=".//Resources/beauty_logo.png"
+            <Image Source=".//Resources/service_logo.png"
                    Opacity=".1"
                    Width="490"/>
         </StackPanel>

@@ -18,17 +18,17 @@ using System.Windows.Threading;
 namespace AutoServiceShopApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageProduct.xaml
+    /// Логика взаимодействия для PageService.xaml
     /// </summary>
-    public partial class PageProduct : Page
+    public partial class PageService : Page
     {
-        public PageProduct()
+        public PageService()
         {
             InitializeComponent();
 
             DispatcherTimer timer = new DispatcherTimer();
 
-            gridListProduct.ItemsSource = ConnectOdb.conObj.Product.ToList();
+            gridListService.ItemsSource = ConnectOdb.conObj.Service.ToList();
 
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += UpdateData;
@@ -37,11 +37,10 @@ namespace AutoServiceShopApp.Pages
 
         public void UpdateData(object sender, object e)
         {
-            var HistoryProduct = ConnectOdb.conObj.Product.ToList();
-            ListProduct.ItemsSource = HistoryProduct;
-            ListProduct.ItemsSource = ConnectOdb.conObj.Product.Where(x => x.Title.ToLower().Contains(TxtSearch.Text) |
-            x.Description.ToLower().Contains(TxtSearch.Text) |
-            x.Manufacturer.Name.ToLower().Contains(TxtSearch.Text)).ToList();
+            var HistoryService = ConnectOdb.conObj.Service.ToList();
+            ListService.ItemsSource = HistoryService;
+            ListService.ItemsSource = ConnectOdb.conObj.Service.Where(x => x.Title.ToLower().Contains(TxtSearch.Text) |
+            x.Description.ToLower().Contains(TxtSearch.Text)).ToList();
         }
 
         private void ListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
@@ -56,12 +55,7 @@ namespace AutoServiceShopApp.Pages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            FrameObj.frameMain.Navigate(new PageEditNew((sender as Button).DataContext as Product));
-        }
-
-        private void BtnSalehistory_Click(object sender, RoutedEventArgs e)
-        {
-            FrameObj.frameMain.Navigate(new PageSaleHistory((sender as Button).DataContext as Product));
+            FrameObj.frameMain.Navigate(new PageEditService((sender as Button).DataContext as Service));
         }
     }
 }

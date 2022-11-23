@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>service_logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -126,6 +129,7 @@
     <Compile Include="AppDataFile\Service.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="AppDataFile\ServiceObj.cs" />
     <Compile Include="AppDataFile\ServicePhoto.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -147,6 +151,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageEditService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,6 +167,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\PageAddProduct.xaml.cs">
@@ -166,6 +178,9 @@
     </Compile>
     <Compile Include="Pages\PageEditNew.xaml.cs">
       <DependentUpon>PageEditNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageEditService.xaml.cs">
+      <DependentUpon>PageEditService.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageMain.xaml.cs">
       <DependentUpon>PageMain.xaml</DependentUpon>
@@ -175,6 +190,9 @@
     </Compile>
     <Compile Include="Pages\PageSaleHistory.xaml.cs">
       <DependentUpon>PageSaleHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageService.xaml.cs">
+      <DependentUpon>PageService.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -210,9 +228,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\beauty_logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="AppDataFile\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -223,6 +238,25 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Услуги автосервиса\diz.jpg" />
+    <Resource Include="Услуги автосервиса\rulevoe-upravlenie-avtomobilya.jpg" />
+    <Resource Include="Услуги автосервиса\transmission.jpg" />
+    <Resource Include="Услуги автосервиса\АКПП.jpg" />
+    <Resource Include="Услуги автосервиса\Вариатор.jpg" />
+    <Resource Include="Услуги автосервиса\Выхлопная система.jpg" />
+    <Resource Include="Услуги автосервиса\ГУР.png" />
+    <Resource Include="Услуги автосервиса\Двигатель.png" />
+    <Resource Include="Услуги автосервиса\Дополнительные услуги.png" />
+    <Resource Include="Услуги автосервиса\Кондиционер.jpg" />
+    <Resource Include="Услуги автосервиса\КПП.png" />
+    <Resource Include="Услуги автосервиса\Подвеска.png" />
+    <Resource Include="Услуги автосервиса\Сцепление.jpg" />
+    <Resource Include="Услуги автосервиса\Техническое обслуживание.png" />
+    <Resource Include="Услуги автосервиса\Топливная система.png" />
+    <Resource Include="Услуги автосервиса\Шиномонтаж.jpg" />
+    <Resource Include="Услуги автосервиса\Электрика.png" />
+    <Resource Include="service_logo.ico" />
+    <Resource Include="Resources\service_logo.png" />
     <Resource Include="Товары автосервиса\0070C563.jpg" />
     <Resource Include="Товары автосервиса\022096CB.jpg" />
     <Resource Include="Товары автосервиса\03D096CB.jpg" />

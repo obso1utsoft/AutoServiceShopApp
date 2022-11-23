@@ -25,6 +25,10 @@ namespace AutoServiceShopApp.Pages
         {
             InitializeComponent();
         }
+        private void btnService_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObj.frameMain.Navigate(new PageService());
+        }
         private void btnProduct_Click(object sender, RoutedEventArgs e)
         {
             FrameObj.frameMain.Navigate(new PageProduct());
