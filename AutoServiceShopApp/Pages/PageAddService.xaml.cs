@@ -31,13 +31,17 @@ namespace AutoServiceShopApp.Pages
         {
             try
             {
+                if (TxtDiscount.Text == "")
+                {
+                    TxtDiscount.Text = null;
+                };
                 Service service = new Service()
                 {
                     Title = TxtTitle.Text,
                     Cost = Convert.ToDecimal(TxtCost.Text),
                     DurationInSeconds = Convert.ToInt32(TxtDuration.Text),
                     Description = TxtDescription.Text,
-                    Discount = Double.Parse(TxtDiscount.Text),
+                    Discount = Convert.ToDouble(TxtDiscount.Text),
                     MainImagePath = TxtImage.Text
 
                 };
