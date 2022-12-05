@@ -33,13 +33,12 @@
                         <DataTemplate>
                             <ListBoxItem
                                 BorderBrush="Black"
-                                Background="White"
                                 Width="600">
                                 <ListBoxItem.Resources>
                                     <Style TargetType="ListBoxItem">
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding IsActive}"
-                                                         Value="False">
+                                                         Value="false">
                                                 <Setter Property="Background" Value="Red"/>
                                             </DataTrigger>
                                         </Style.Triggers>
@@ -101,6 +100,12 @@
         <StackPanel VerticalAlignment="Bottom"
                     HorizontalAlignment="Right"
                     Margin="0 0 17 150">
+            <Button Name="BtnPrint"
+                    Click="BtnPrint_Click"
+                    Content="Печать таблицы"
+                    Width="150"
+                    Style="{StaticResource mainBtn}"
+                />
             <Button Name="BtnAdd"
                     Click="BtnAdd_Click"
                     Content="Добавить товар"
@@ -115,13 +120,25 @@
                 />
         </StackPanel>
         
-        <StackPanel VerticalAlignment="Bottom">
+        <StackPanel VerticalAlignment="Bottom"
+                    Name="gridPanelListProduct">
             <DataGrid Name="gridListProduct"
                       Height="150"
                       IsReadOnly="True"
                       SelectionMode="Extended"
                       SelectionUnit="Cell"
                       AutoGenerateColumns="False">
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsActive}" Value="false">
+                                <Setter Property="Background" Value="LightGray"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Название продукта"
                                         Binding="{Binding Title}"

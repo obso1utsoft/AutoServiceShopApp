@@ -33,7 +33,7 @@ namespace AutoServiceShopApp.Pages
             {
                 if (TxtDiscount.Text == "")
                 {
-                    TxtDiscount.Text = null;
+                    TxtDiscount.Text = "0";
                 };
                 Service service = new Service()
                 {
